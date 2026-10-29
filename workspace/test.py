@@ -8,8 +8,6 @@ TIMEOUT_SECONDS = 10
 
 
 def handle(base: str = 'AUD') -> pd.DataFrame:
-    #ABCD
-    print("helloxxx")
     '''The latest reference rates for one unit of the base currency, one row per currency'''
     try:
         response = requests.get(f'{BASE_URL}/latest', params={'base': base}, timeout=TIMEOUT_SECONDS)

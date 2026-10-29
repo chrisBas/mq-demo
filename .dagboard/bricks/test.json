@@ -1,6 +1,7 @@
 {
-  "code": "UcMTnAg7wTssRUdUZLrJaQOkx3s73BczSiweQ56pR/Y=",
+  "code": "xf1TgijbSmjKU/inhFQhN1kUX6Zv5pcTw8FeqFd3MbA=",
   "metadata": {
+    "doc": "The latest reference rates for one unit of the base currency, one row per currency",
     "inputs": [
       {
         "name": "base",
