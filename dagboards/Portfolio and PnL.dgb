@@ -1,0 +1,1380 @@
+{
+  "dagboard": {
+    "dag": {
+      "arcs": [
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 3,
+            "slotKey": "df"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 1
+          },
+          "target": {
+            "nodeId": 3,
+            "slotKey": "fund"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 1
+          },
+          "target": {
+            "nodeId": 4,
+            "slotKey": "fund"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 4
+          },
+          "target": {
+            "nodeId": 5,
+            "slotKey": "df"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 12
+          },
+          "target": {
+            "nodeId": 6
+          }
+        },
+        {
+          "source": {
+            "nodeId": 9
+          },
+          "target": {
+            "nodeId": 7
+          }
+        },
+        {
+          "source": {
+            "nodeId": 5
+          },
+          "target": {
+            "nodeId": 8
+          }
+        },
+        {
+          "source": {
+            "nodeId": 3
+          },
+          "target": {
+            "nodeId": 9,
+            "slotKey": "df"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 7,
+            "slotKey": "Selected Values"
+          },
+          "target": {
+            "nodeId": 10,
+            "slotKey": "selected"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "manager"
+          },
+          "target": {
+            "nodeId": 4,
+            "slotKey": "manager"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "strategy"
+          },
+          "target": {
+            "nodeId": 4,
+            "slotKey": "strategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "substrategy"
+          },
+          "target": {
+            "nodeId": 4,
+            "slotKey": "substrategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "symbol"
+          },
+          "target": {
+            "nodeId": 4,
+            "slotKey": "symbol"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 1
+          },
+          "target": {
+            "nodeId": 11,
+            "slotKey": "fund"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "manager"
+          },
+          "target": {
+            "nodeId": 11,
+            "slotKey": "manager"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "strategy"
+          },
+          "target": {
+            "nodeId": 11,
+            "slotKey": "strategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "substrategy"
+          },
+          "target": {
+            "nodeId": 11,
+            "slotKey": "substrategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "symbol"
+          },
+          "target": {
+            "nodeId": 11,
+            "slotKey": "symbol"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 3
+          },
+          "target": {
+            "nodeId": 12,
+            "slotKey": "df"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "manager"
+          },
+          "target": {
+            "nodeId": 12,
+            "slotKey": "manager"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "strategy"
+          },
+          "target": {
+            "nodeId": 12,
+            "slotKey": "strategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "substrategy"
+          },
+          "target": {
+            "nodeId": 12,
+            "slotKey": "substrategy"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 11,
+            "slotKey": "contributions"
+          },
+          "target": {
+            "nodeId": 13
+          }
+        },
+        {
+          "source": {
+            "nodeId": 11,
+            "slotKey": "drawdown"
+          },
+          "target": {
+            "nodeId": 14
+          }
+        },
+        {
+          "source": {
+            "nodeId": 10,
+            "slotKey": "label"
+          },
+          "target": {
+            "nodeId": 15
+          }
+        }
+      ],
+      "nodes": {
+        "1": {
+          "widget": {
+            "inputs": [
+              {
+                "name": "Selections",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "container": "LIST",
+                      "values": "STRING"
+                    }
+                  },
+                  "fixture": {
+                    "series": {
+                      "index": {},
+                      "values": {
+                        "strings": {
+                          "items": [
+                            "AlphaFund",
+                            "BetaFund"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "10": {
+          "function": {
+            "functionId": "examples/positions.from_selection",
+            "inputs": [
+              {
+                "name": "selected",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "manager",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "strategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "substrategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "symbol",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "label",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "11": {
+          "function": {
+            "functionId": "examples/pms.risk",
+            "inputs": [
+              {
+                "name": "start_date",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "timestamp": "2025-01-02T21:00:00Z"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "end_date",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "timestamp": "2025-08-29T21:00:00Z"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "fund",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "manager",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "strategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "substrategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "symbol",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "contributions",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "drawdown",
+                "spec": {
+                  "dataType": {
+                    "series": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "12": {
+          "function": {
+            "functionId": "examples/positions.filter",
+            "inputs": [
+              {
+                "name": "df",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "fund",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              },
+              {
+                "name": "manager",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "strategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "substrategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "13": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Values",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "Selected Coordinates",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "14": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Range",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Timestamp",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  }
+                }
+              },
+              {
+                "name": "Selection at Timestamp",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Point",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "15": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "2": {
+          "function": {
+            "functionId": "examples/pms.get_pnl",
+            "inputs": [
+              {
+                "name": "as_of",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "timestamp": "2025-08-29T20:00:00Z"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "3": {
+          "function": {
+            "functionId": "examples/positions.filter",
+            "inputs": [
+              {
+                "name": "df",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "fund",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              },
+              {
+                "name": "manager",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              },
+              {
+                "name": "strategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              },
+              {
+                "name": "substrategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "4": {
+          "function": {
+            "functionId": "examples/pms.get_daily_pnl",
+            "inputs": [
+              {
+                "name": "start_date",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "timestamp": "2025-01-02T21:00:00Z"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "end_date",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "timestamp": "2025-08-29T21:00:00Z"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "fund",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "manager",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "strategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "substrategy",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "symbol",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "5": {
+          "function": {
+            "functionId": "examples/utils.df.convert_to_ts",
+            "inputs": [
+              {
+                "name": "df",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "ts_col",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": "date"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "val_cols",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "container": "LIST",
+                      "values": "STRING"
+                    }
+                  },
+                  "fixture": {
+                    "series": {
+                      "index": {},
+                      "values": {
+                        "strings": {
+                          "items": [
+                            "realized_pnl",
+                            "unrealized_pnl"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "6": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "7": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Values",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "Selected Coordinates",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "8": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Range",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Timestamp",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  }
+                }
+              },
+              {
+                "name": "Selection at Timestamp",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Point",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "9": {
+          "function": {
+            "functionId": "examples/positions.book",
+            "inputs": [
+              {
+                "name": "df",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "defaultValues": {
+      "1": {
+        "items": [
+          {
+            "value": {
+              "scalar": {
+                "string": "AlphaFund"
+              }
+            }
+          }
+        ]
+      },
+      "7": {
+        "items": [
+          {
+            "name": "Selected Values",
+            "value": {
+              "none": {}
+            }
+          }
+        ]
+      }
+    },
+    "inputPanel": {
+      "inputWidgets": [
+        {
+          "widget": {
+            "id": 1,
+            "jsonSettings": {
+              "Allow Creation of New Selections": false
+            },
+            "label": "Fund",
+            "widgetSubtype": "Single Select"
+          }
+        }
+      ]
+    },
+    "settings": {
+      "refreshOnInputChange": true
+    },
+    "tabs": [
+      {
+        "inputPanel": {},
+        "name": "Overview",
+        "outputPanels": [
+          {
+            "inputPanel": {},
+            "title": "Positions on August 29, 2025",
+            "visualizationWidgets": [
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 6,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 6,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 6,
+                    "width": 8
+                  },
+                  "4": {
+                    "height": 6,
+                    "width": 12
+                  },
+                  "5": {
+                    "column": 5,
+                    "height": 7,
+                    "width": 11
+                  },
+                  "6": {
+                    "column": 5,
+                    "height": 7,
+                    "width": 11
+                  }
+                },
+                "widget": {
+                  "id": 7,
+                  "jsonSettings": {
+                    "Column Aggregations": [
+                      [
+                        "market_value",
+                        "sum"
+                      ],
+                      [
+                        "weight",
+                        "sum"
+                      ],
+                      [
+                        "pnl",
+                        "sum"
+                      ],
+                      [
+                        "unrealized_pnl",
+                        "sum"
+                      ],
+                      [
+                        "realized_pnl",
+                        "sum"
+                      ]
+                    ],
+                    "Column Formats": [
+                      [
+                        "market_value",
+                        "0,0"
+                      ],
+                      [
+                        "weight",
+                        "0.0%"
+                      ],
+                      [
+                        "pnl",
+                        "0,0"
+                      ],
+                      [
+                        "unrealized_pnl",
+                        "0,0"
+                      ],
+                      [
+                        "realized_pnl",
+                        "0,0"
+                      ]
+                    ],
+                    "Diverging Color Scale": [
+                      "pnl"
+                    ],
+                    "Group By": [
+                      "manager",
+                      "strategy",
+                      "substrategy",
+                      "symbol"
+                    ],
+                    "Hide Columns": [
+                      "unrealized_pnl",
+                      "realized_pnl"
+                    ]
+                  },
+                  "label": "Positions: click a row to drill in, and again to see them all",
+                  "widgetSubtype": "Drill Down Table"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 1,
+                    "row": 6,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 1,
+                    "row": 6,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 1,
+                    "row": 6,
+                    "width": 8
+                  },
+                  "4": {
+                    "height": 1,
+                    "row": 6,
+                    "width": 5
+                  },
+                  "5": {
+                    "height": 1,
+                    "width": 5
+                  },
+                  "6": {
+                    "height": 1,
+                    "width": 5
+                  }
+                },
+                "widget": {
+                  "id": 15,
+                  "jsonSettings": {},
+                  "label": "Selection",
+                  "widgetSubtype": "Text Output"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 6,
+                    "row": 7,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 6,
+                    "row": 7,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 6,
+                    "row": 7,
+                    "width": 4
+                  },
+                  "4": {
+                    "height": 6,
+                    "row": 7,
+                    "width": 5
+                  },
+                  "5": {
+                    "height": 6,
+                    "row": 1,
+                    "width": 5
+                  },
+                  "6": {
+                    "height": 6,
+                    "row": 1,
+                    "width": 5
+                  }
+                },
+                "widget": {
+                  "id": 6,
+                  "jsonSettings": {
+                    "Color Value Column Name": "unrealized_pnl",
+                    "Value Column Name": "market_value"
+                  },
+                  "label": "Market value of the selection, colored by unrealized PnL",
+                  "widgetSubtype": "Sunburst Chart"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 4,
+                    "row": 13,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 4,
+                    "row": 13,
+                    "width": 6
+                  },
+                  "3": {
+                    "column": 4,
+                    "height": 6,
+                    "row": 7,
+                    "width": 4
+                  },
+                  "4": {
+                    "column": 5,
+                    "height": 7,
+                    "row": 6,
+                    "width": 7
+                  },
+                  "5": {
+                    "height": 4,
+                    "row": 7,
+                    "width": 16
+                  },
+                  "6": {
+                    "height": 4,
+                    "row": 7,
+                    "width": 16
+                  }
+                },
+                "widget": {
+                  "id": 8,
+                  "jsonSettings": {
+                    "Config": "{\"yAxis\":{\"title\":{\"text\":\"\"}}}"
+                  },
+                  "label": "Daily PnL in 2025",
+                  "widgetSubtype": "Line Chart"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 5,
+                    "row": 17,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 5,
+                    "row": 17,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 5,
+                    "row": 13,
+                    "width": 8
+                  },
+                  "4": {
+                    "height": 5,
+                    "row": 13,
+                    "width": 7
+                  },
+                  "5": {
+                    "height": 5,
+                    "row": 11,
+                    "width": 9
+                  },
+                  "6": {
+                    "height": 5,
+                    "row": 11,
+                    "width": 9
+                  }
+                },
+                "widget": {
+                  "id": 13,
+                  "jsonSettings": {
+                    "Column Formats": [
+                      [
+                        "pnl",
+                        "0,0"
+                      ],
+                      [
+                        "volatility",
+                        "0,0"
+                      ],
+                      [
+                        "contribution",
+                        "0,0"
+                      ],
+                      [
+                        "share",
+                        "0.0%"
+                      ],
+                      [
+                        "max_drawdown",
+                        "0,0"
+                      ]
+                    ]
+                  },
+                  "label": "Each position's contribution to the volatility of the selection's daily PnL",
+                  "widgetSubtype": "Ag Grid"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 4,
+                    "row": 22,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 4,
+                    "row": 22,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 4,
+                    "row": 18,
+                    "width": 8
+                  },
+                  "4": {
+                    "column": 7,
+                    "height": 5,
+                    "row": 13,
+                    "width": 5
+                  },
+                  "5": {
+                    "column": 9,
+                    "height": 5,
+                    "row": 11,
+                    "width": 7
+                  },
+                  "6": {
+                    "column": 9,
+                    "height": 5,
+                    "row": 11,
+                    "width": 7
+                  }
+                },
+                "widget": {
+                  "id": 14,
+                  "jsonSettings": {
+                    "Config": "{\"yAxis\":{\"title\":{\"text\":\"\"}}}"
+                  },
+                  "label": "Drawdown of the selection's PnL",
+                  "widgetSubtype": "Line Chart"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "A made-up fund's positions by manager and strategy, and its daily PnL in 2025. The positions and PnL come from the examples library's mock portfolio management system, generated from fixed seeds.",
+  "format": "dgb/1",
+  "icon": "tabler:layout-dashboard",
+  "tags": [
+    "sample",
+    "portfolio",
+    "synthetic data"
+  ],
+  "title": "Portfolio and PnL"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "UcMTnAg7wTssRUdUZLrJaQOkx3s73BczSiweQ56pR/Y=",
+  "metadata": {
+    "inputs": [
+      {
+        "name": "base",
+        "spec": {
+          "dataType": {
+            "scalar": "STRING"
+          },
+          "defaultValue": {
+            "scalar": {
+              "string": "AUD"
+            }
+          }
+        }
+      }
+    ],
+    "kind": "link",
+    "outputs": [
+      {
+        "dataType": {
+          "dataframe": {}
+        }
+      }
+    ],
+    "runtimeEnvId": "microquant/pyodide"
+  }
+}

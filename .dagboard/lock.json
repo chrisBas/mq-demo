@@ -1,0 +1,135 @@
+{
+  "edition": "single-user",
+  "format": 3,
+  "libraries": [
+    {
+      "name": "examples",
+      "version": "1.2.0"
+    }
+  ],
+  "runtimes": [
+    {
+      "dependencies": [
+        {
+          "name": "bridge-core",
+          "version": "0.1.0"
+        },
+        {
+          "name": "cachetools",
+          "version": "7.0.5"
+        },
+        {
+          "name": "certifi",
+          "version": "2026.10.23"
+        },
+        {
+          "name": "charset-normalizer",
+          "version": "3.4.7"
+        },
+        {
+          "name": "idna",
+          "version": "3.20"
+        },
+        {
+          "name": "joblib",
+          "version": "1.5.3"
+        },
+        {
+          "name": "microquant-brickutils",
+          "version": "1.2.0"
+        },
+        {
+          "name": "microquant-examples",
+          "version": "1.2.0"
+        },
+        {
+          "name": "networkx",
+          "version": "3.6.1"
+        },
+        {
+          "name": "numpy",
+          "version": "2.4.6"
+        },
+        {
+          "name": "packaging",
+          "version": "26.1"
+        },
+        {
+          "name": "pandas",
+          "version": "3.0.2"
+        },
+        {
+          "name": "patsy",
+          "version": "1.0.2"
+        },
+        {
+          "name": "protobuf",
+          "version": "7.34.1"
+        },
+        {
+          "name": "pyarrow",
+          "version": "22.0.0"
+        },
+        {
+          "name": "pyodide-host",
+          "version": "0.1.0"
+        },
+        {
+          "name": "pyodide-unix-timezones",
+          "version": "1.0.0"
+        },
+        {
+          "name": "python-calamine",
+          "version": "0.6.2"
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.9.0.post0"
+        },
+        {
+          "name": "pytz",
+          "version": "2026.1.post1"
+        },
+        {
+          "name": "requests",
+          "version": "2.33.1"
+        },
+        {
+          "name": "scikit-learn",
+          "version": "1.8.0"
+        },
+        {
+          "name": "scipy",
+          "version": "1.18.0"
+        },
+        {
+          "name": "six",
+          "version": "1.17.0"
+        },
+        {
+          "name": "statsmodels",
+          "version": "0.14.6"
+        },
+        {
+          "name": "ta",
+          "version": "0.11.0"
+        },
+        {
+          "name": "threadpoolctl",
+          "version": "3.6.0"
+        },
+        {
+          "name": "tzdata",
+          "version": "2025.3"
+        },
+        {
+          "name": "urllib3",
+          "version": "2.8.0"
+        }
+      ],
+      "id": "microquant/pyodide",
+      "language": "python",
+      "languageVersion": "3.14.2"
+    }
+  ]
+}

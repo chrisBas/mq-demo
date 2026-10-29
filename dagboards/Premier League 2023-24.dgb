@@ -1,0 +1,881 @@
+{
+  "dagboard": {
+    "dag": {
+      "arcs": [
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 3,
+            "slotKey": "matches"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 1
+          },
+          "target": {
+            "nodeId": 3,
+            "slotKey": "until"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 3
+          },
+          "target": {
+            "nodeId": 4
+          }
+        },
+        {
+          "source": {
+            "nodeId": 4,
+            "slotKey": "Selected Values"
+          },
+          "target": {
+            "nodeId": 5,
+            "slotKey": "selected"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 6,
+            "slotKey": "matches"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 5
+          },
+          "target": {
+            "nodeId": 6,
+            "slotKey": "team"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 7,
+            "slotKey": "matches"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 5
+          },
+          "target": {
+            "nodeId": 7,
+            "slotKey": "team"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 8,
+            "slotKey": "matches"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 5
+          },
+          "target": {
+            "nodeId": 8,
+            "slotKey": "team"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 2
+          },
+          "target": {
+            "nodeId": 9,
+            "slotKey": "matches"
+          }
+        },
+        {
+          "source": {
+            "nodeId": 8
+          },
+          "target": {
+            "nodeId": 10
+          }
+        },
+        {
+          "source": {
+            "nodeId": 6
+          },
+          "target": {
+            "nodeId": 11
+          }
+        },
+        {
+          "source": {
+            "nodeId": 7
+          },
+          "target": {
+            "nodeId": 12
+          }
+        },
+        {
+          "source": {
+            "nodeId": 9
+          },
+          "target": {
+            "nodeId": 13
+          }
+        }
+      ],
+      "nodes": {
+        "1": {
+          "widget": {
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATE"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "10": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Range",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Timestamp",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  }
+                }
+              },
+              {
+                "name": "Selection at Timestamp",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Point",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "11": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Values",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "Selected Coordinates",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "12": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Range",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Timestamp",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATETIME"
+                  }
+                }
+              },
+              {
+                "name": "Selection at Timestamp",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Selected Point",
+                "spec": {
+                  "dataType": {
+                    "series": {
+                      "values": "FLOAT"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "13": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "2": {
+          "function": {
+            "functionId": "examples/utils.df.read_csv",
+            "inputs": [
+              {
+                "name": "csv_location",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": "football_premier_league_2023_24.csv"
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "3": {
+          "function": {
+            "functionId": "examples/sports.league_table",
+            "inputs": [
+              {
+                "name": "matches",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "until",
+                "spec": {
+                  "dataType": {
+                    "scalar": "DATE"
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "4": {
+          "widget": {
+            "inputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "Selected Values",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "Selected Coordinates",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "5": {
+          "function": {
+            "functionId": "examples/utils.selection.row_value",
+            "inputs": [
+              {
+                "name": "selected",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  },
+                  "defaultValue": {
+                    "none": {}
+                  }
+                }
+              },
+              {
+                "name": "column",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  },
+                  "fixture": {
+                    "scalar": {
+                      "string": "team"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "default",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "6": {
+          "function": {
+            "functionId": "examples/sports.team_matches",
+            "inputs": [
+              {
+                "name": "matches",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "team",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "7": {
+          "function": {
+            "functionId": "examples/sports.goal_difference",
+            "inputs": [
+              {
+                "name": "matches",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "team",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "8": {
+          "function": {
+            "functionId": "examples/sports.points_race",
+            "inputs": [
+              {
+                "name": "matches",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              },
+              {
+                "name": "top",
+                "spec": {
+                  "dataType": {
+                    "scalar": "INT"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "int": "6"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "team",
+                "spec": {
+                  "dataType": {
+                    "scalar": "STRING"
+                  },
+                  "defaultValue": {
+                    "scalar": {
+                      "string": ""
+                    }
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "series": {}
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "9": {
+          "function": {
+            "functionId": "examples/sports.attack_defence",
+            "inputs": [
+              {
+                "name": "matches",
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "spec": {
+                  "dataType": {
+                    "dataframe": {}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "defaultValues": {
+      "1": {
+        "items": [
+          {
+            "value": {
+              "scalar": {
+                "timestamp": "2024-05-19T12:00:00Z"
+              }
+            }
+          }
+        ]
+      },
+      "4": {
+        "items": [
+          {
+            "name": "Selected Values",
+            "value": {
+              "none": {}
+            }
+          }
+        ]
+      }
+    },
+    "inputPanel": {
+      "inputWidgets": [
+        {
+          "widget": {
+            "id": 1,
+            "jsonSettings": {},
+            "label": "Table on",
+            "widgetSubtype": "Date Picker"
+          }
+        }
+      ]
+    },
+    "settings": {
+      "refreshOnInputChange": true
+    },
+    "tabs": [
+      {
+        "inputPanel": {},
+        "name": "Overview",
+        "outputPanels": [
+          {
+            "inputPanel": {},
+            "title": "Premier League 2023/24",
+            "visualizationWidgets": [
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 9,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 9,
+                    "width": 6
+                  },
+                  "3": {
+                    "height": 9,
+                    "width": 8
+                  },
+                  "4": {
+                    "height": 9,
+                    "width": 12
+                  },
+                  "5": {
+                    "height": 9,
+                    "width": 16
+                  },
+                  "6": {
+                    "height": 9,
+                    "width": 16
+                  }
+                },
+                "widget": {
+                  "id": 4,
+                  "jsonSettings": {},
+                  "label": "League table: select a team to follow it",
+                  "widgetSubtype": "Table"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 3
+                  },
+                  "3": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 4
+                  },
+                  "4": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 6
+                  },
+                  "5": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 8
+                  },
+                  "6": {
+                    "height": 5,
+                    "row": 9,
+                    "width": 8
+                  }
+                },
+                "widget": {
+                  "id": 10,
+                  "jsonSettings": {
+                    "Config": "{\"yAxis\":{\"title\":{\"text\":\"\"}}}"
+                  },
+                  "label": "Points race: the top six, and the team selected",
+                  "widgetSubtype": "Line Chart"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 6,
+                    "row": 19,
+                    "width": 1
+                  },
+                  "2": {
+                    "height": 6,
+                    "row": 14,
+                    "width": 3
+                  },
+                  "3": {
+                    "height": 6,
+                    "row": 14,
+                    "width": 4
+                  },
+                  "4": {
+                    "height": 6,
+                    "row": 14,
+                    "width": 7
+                  },
+                  "5": {
+                    "height": 6,
+                    "row": 14,
+                    "width": 9
+                  },
+                  "6": {
+                    "height": 6,
+                    "row": 14,
+                    "width": 9
+                  }
+                },
+                "widget": {
+                  "id": 11,
+                  "jsonSettings": {},
+                  "label": "The team's matches",
+                  "widgetSubtype": "Table"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 5,
+                    "row": 14,
+                    "width": 1
+                  },
+                  "2": {
+                    "column": 3,
+                    "height": 5,
+                    "row": 9,
+                    "width": 3
+                  },
+                  "3": {
+                    "column": 4,
+                    "height": 5,
+                    "row": 9,
+                    "width": 4
+                  },
+                  "4": {
+                    "column": 6,
+                    "height": 5,
+                    "row": 9,
+                    "width": 6
+                  },
+                  "5": {
+                    "column": 8,
+                    "height": 5,
+                    "row": 9,
+                    "width": 8
+                  },
+                  "6": {
+                    "column": 8,
+                    "height": 5,
+                    "row": 9,
+                    "width": 8
+                  }
+                },
+                "widget": {
+                  "id": 12,
+                  "jsonSettings": {
+                    "Config": "{\"yAxis\":{\"title\":{\"text\":\"\"}}}"
+                  },
+                  "label": "The team's goal difference per match",
+                  "widgetSubtype": "Bar Chart"
+                }
+              },
+              {
+                "layoutByLayoutmode": {
+                  "1": {
+                    "height": 6,
+                    "row": 25,
+                    "width": 1
+                  },
+                  "2": {
+                    "column": 3,
+                    "height": 6,
+                    "row": 14,
+                    "width": 3
+                  },
+                  "3": {
+                    "column": 4,
+                    "height": 6,
+                    "row": 14,
+                    "width": 4
+                  },
+                  "4": {
+                    "column": 7,
+                    "height": 6,
+                    "row": 14,
+                    "width": 5
+                  },
+                  "5": {
+                    "column": 9,
+                    "height": 6,
+                    "row": 14,
+                    "width": 7
+                  },
+                  "6": {
+                    "column": 9,
+                    "height": 6,
+                    "row": 14,
+                    "width": 7
+                  }
+                },
+                "widget": {
+                  "id": 13,
+                  "jsonSettings": {
+                    "Config": "{\"plotOptions\":{\"series\":{\"dataLabels\":{\"enabled\":true,\"format\":\"{point.value:.2f}\"}}}}"
+                  },
+                  "label": "Goals per game, scored and conceded, at home and away",
+                  "widgetSubtype": "Heatmap"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "description": "The 2023/24 Premier League's table on any day, its points race and each team's goals; a team selected in the table shows its matches. Results: openfootball (github.com/openfootball), the season's 380 matches from its football.json, in football_premier_league_2023_24.csv.",
+  "format": "dgb/1",
+  "icon": "tabler:layout-dashboard",
+  "tags": [
+    "sample",
+    "sport",
+    "football",
+    "public data"
+  ],
+  "title": "Premier League 2023-24"
+}

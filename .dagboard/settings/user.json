@@ -1,0 +1,20 @@
+{
+  "id": "studio.settings",
+  "userSettings": {
+    "siteAppearance": {
+      "styles": {
+        "functionPage": {
+          "runOnSave": false
+        },
+        "gitRemote": "https://github.com/chrisBas/mq-demo",
+        "seenTips": [
+          "brick-editor",
+          "first-app",
+          "dagboard-edit",
+          "dagboard-view"
+        ],
+        "spotlightResults": "global"
+      }
+    }
+  }
+}
