@@ -4,7 +4,7 @@ import requests
 # The API this brick reads: change it to yours. In the browser, the API must let pages from other
 # sites read its answers (CORS). Don't write a key into the code, which goes into what you share.
 BASE_URL = 'https://api.frankfurter.dev/v1'
-TIMEOUT_SECONDS = 10
+TIMEOUT_SECONDS = 5
 
 
 def handle(base: str = 'AUD') -> pd.DataFrame:
